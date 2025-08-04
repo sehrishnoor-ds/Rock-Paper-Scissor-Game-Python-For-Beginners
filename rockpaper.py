@@ -4,7 +4,7 @@ CHOICES = 'rps'
 
 
 def get_player_choice():
-    """Getting user input and validating it is one of the choices above"""
+    """Get user input and validate it is one of the choices above"""
     player_choice = None
     while player_choice is None:
         player_choice = input('Choices: \n(R)ock \n(P)aper \n(S)cissors \n\nPick: ')
@@ -14,7 +14,7 @@ def get_player_choice():
 
 
 def get_computer_choice():
-    """Letting computer pick one of the valid choices at random"""
+    """Have the computer pick one of the valid choices at random"""
     computer_choice = random.randint(0, 2)
     computer_choice = CHOICES[computer_choice]
     return computer_choice
@@ -36,7 +36,8 @@ def print_winner(player_choice, computer_choice):
         print('Player wins!')
     else:
         print('Alexa wins!')
-        print('%s beats %s' % (computer_choice, player_choice))
+        # Using an f-string to format the output
+        print(f'{computer_choice} beats {player_choice}')
 
 
 def play_game():
@@ -44,10 +45,12 @@ def play_game():
     player_choice = get_player_choice()
     computer_choice = get_computer_choice()
     if is_draw(player_choice, computer_choice):
-        print("It's a draw, both players picked %s: " % player_choice)
+        # Using an f-string here
+        print(f"It's a draw, both players picked {player_choice}: ")
     else:
-        print("Alexa picked: %s" % computer_choice)
-        print("Player picked: %s" % player_choice)
+        # Using f-strings here as well
+        print(f"Alexa picked: {computer_choice}")
+        print(f"Player picked: {player_choice}")
         print_winner(player_choice, computer_choice)
 
 
