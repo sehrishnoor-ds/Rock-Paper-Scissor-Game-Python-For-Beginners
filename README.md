@@ -1,4 +1,4 @@
-# Rock-Paper-Scissor-Game-Python-For-Beginners
+# Rock-Paper-Scissor-Game-in-Python-For-Beginners
 This is a basic command-line game of Rock, Paper, Scissors built in Python. It's a great project for beginners to understand core programming concepts like functions, user input, and conditional logic.
 
 **How It Works**
